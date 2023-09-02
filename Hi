@@ -6,7 +6,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     
     if lowerMsg == ".antijail" then
         jail = true
-            elseif lowerMsg = ".unantijail" or lowerMsg == ".unj" then
+            elseif lowerMsg == ".unantijail" or lowerMsg == ".unj" then
             jail = false
     end
 end)
