@@ -1,0 +1,21 @@
+local object = "GAMERNOOBIKYT's jail"  -- Replace with the actual name of your sound object
+local jail = false
+local time = 0.1
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local lowerMsg = msg:lower()
+    
+    if lowerMsg == ".antijail" then
+        jail = true
+            elseif lowerMsg = ".unantijail" or lowerMsg = ".unj" then
+            jail = false
+    end
+end)
+
+while wait(time) do
+    if jail then
+        local sound = game:GetService("Workspace").Terrain["_Game"].Folder:FindFirstChild(object)
+        if sound then
+            game.Players:Chat("unjail me")
+        end
+    end
+end
